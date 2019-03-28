@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>一个简单的js方法插件编写模式</title>
+</head>
+<body>
+
+<script>
+    (function(fn){
+        // 给插件换上window环境下的名字
+        window.clwFn = fn()
+    }(function(){
+        // 初始化
+        let init = {};
+
+        // 丰富插件方法
+        // alert方法
+        init.al = function(content) {
+            return alert(content)
+        };
+
+        // 转码方法
+        init.decodeStr = function (str) {
+            return str.replace(/(%[0-9A-Z]{2})+/g, decodeURIComponent)
+        };
+
+        // log方法
+        init.log = function (content) {
+            return console.log(content)
+        };
+
+        return init;
+    }));
+
+    // 测试插件成效
+    console.log(clwFn); // clwFn方法
+    console.log(clwFn.decodeStr('%32')); // 2
+    clwFn.log(clwFn.decodeStr('%20')); //
+</script>
+</body>
+</html>
