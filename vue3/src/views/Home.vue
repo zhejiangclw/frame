@@ -9,14 +9,13 @@
 <script>
     // @ is an alias to /src
     import HelloWorld from '@/components/HelloWorld.vue'
-    // import OboTip from '@/components/otherBrowserOpenTip'
 
-    // Vue.use(OboTip)
+
 
     export default {
         name: 'home',
         components: {
-            HelloWorld
+            HelloWorld,
         },
         mounted(){
 
@@ -24,7 +23,7 @@
         },
         methods: {
             open() {
-                this.$oboTip.open()
+                // this.$oboTip.open()
             }
         }
     }

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <script src="https://unpkg.com/vue-lazyload/vue-lazyload.js"></script>
+</head>
+<body>
+    <div id="app">
+        <ul>
+            <li class="" v-for="count in 10" v-lazy-container="{ selector: 'img', error: './bg1.png', loading: './bg1.png' }">
+                <img :data-src="'https://picsum.photos/200/300/?'+count" alt="" width="200" height="300">
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        import Vue from 'https://cdn.jsdelivr.net/npm/vue/dist/vue.js';
+
+        import VueLazyload from 'https://unpkg.com/vue-lazyload/vue-lazyload.js';
+
+        Vue.use(VueLazyload)
+        let vm = new Vue({
+            el: '#app',
+            data: {
+
+            },
+
+            mounted: function () {
+
+            }
+        })
+    </script>
+</body>
+</html>

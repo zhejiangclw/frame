@@ -1,0 +1,289 @@
+
+
+/*// css修改的多是padding，margin，font-size，color，background-image，width，height*/
+/*// 对于font-weight(font600)这种有固定值的，可以设置全部；*/
+/*// 对于font-size(font18)、color(color_)、background(bg_color_),border-radius(bd_可以设置常用的几个；*/
+/*// 对于特定样式的，比如display：flex(flex_)、flex(flex1)、单行隐藏(single_line)，多行隐藏(double_line)，点击特效(ui_click)，常用特效*/
+/*// 对于通用样式，比如html，body，a，ul，li，p，*，可以在开头设置*/
+/*// 对于背景图片之类的，写些必须要用的辅助样式即可，可减少代码量，比如bg_img,bg_cover,bg_repeat*/
+
+.box_ctbox{
+    box-sizing: content-box;
+}
+.box_bdbox{
+    box-sizing: border-box;
+}
+
+.font20 {
+    font-size: 20px !important;
+}
+.font18 {
+    font-size: 18px !important;
+}
+.font16 {
+    font-size: 16px !important;
+}
+.font15 {
+    font-size: 15px !important;
+}
+.font14 {
+    font-size: 14px !important;
+}
+.font12 {
+    font-size: 12px !important;
+}
+.font10 {
+    font-size: 10px !important;
+}
+
+.font400 {
+    font-weight: 400;
+}
+.font800 {
+    font-weight: 800;
+}
+
+.color_000 {
+    color: #000;
+}
+.color_fff {
+    color: #FFFFFF;
+}
+.color_efefef {
+    color: #EFEFEF;
+}
+.color_price {
+    color: #FF5E72;
+}
+.color_blue {
+    color: rgb(0, 157, 245);
+}
+.color_333 {
+    color: #333333;
+}
+
+.opacity8 {
+    opacity: .8;
+}
+.opacity5 {
+    opacity: .5;
+}
+.opacity4 {
+    opacity: .4;
+}
+
+.lineHeight25 {
+    line-height: 25px;
+}
+.lineHeight20 {
+    line-height: 20px;
+}
+
+.txt_center {
+    text-align: center;
+}
+.txt_left {
+    text-align: left;
+}
+
+/*常用背景样式及背景色*/
+.bg_img {
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.bg_cover {
+    -webkit-background-size: cover !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+}
+.bg_fff {
+    background-color: #FFFFFF;
+}
+.bg_efefef {
+    background-color: #EFEFEF;
+}
+.bg_e3e3e3 {
+    background-color: #e3e3e3;
+}
+
+/*常用border-radius*/
+.bd_radius_4 {
+    overflow: hidden;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+.bd_radius_8 {
+    overflow: hidden;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+}
+.bd_radius_15 {
+    overflow: hidden;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+}
+.bd_radius_24 {
+    overflow: hidden;
+    -webkit-border-radius: 24px;
+    -moz-border-radius: 24px;
+    border-radius: 24px;
+}
+.bd_radius_50{
+    overflow: hidden;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+
+/*常用border*/
+.bd_5D5D5D{border: 1px solid #5D5D5D;}
+.bd_bottom_1_type1{border-bottom: 1px solid rgba(0,0,0,.2);}
+
+/*常用margin*/
+.mgr_20{
+    margin-right: 20px;
+}
+
+
+/*清除浮动*/
+.fl{float: left;}
+.fr{float: right;}
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+.clearfix{overflow:hidden;_zoom:1;}
+
+/*各类flex*/
+.flex {
+    display: -moz-box; /* Firefox */
+    display: -ms-flexbox; /* IE10 */
+    display: -webkit-box; /* Safari */
+    display: -webkit-flex; /* Chrome, WebKit */
+    display: flex;
+}
+.flex_center {
+    display: -moz-box; /* Firefox */
+    display: -ms-flexbox; /* IE10 */
+    display: -webkit-box; /* Safari */
+    display: -webkit-flex; /* Chrome, WebKit */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.flex_vertical_middle {
+    display: -moz-box; /* Firefox */
+    display: -ms-flexbox; /* IE10 */
+    display: -webkit-box; /* Safari */
+    display: -webkit-flex; /* Chrome, WebKit */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.flex_vertical_between {
+    display: -moz-box; /* Firefox */
+    display: -ms-flexbox; /* IE10 */
+    display: -webkit-box; /* Safari */
+    display: -webkit-flex; /* Chrome, WebKit */
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.flex_between {
+    display: -moz-box; /* Firefox */
+    display: -ms-flexbox; /* IE10 */
+    display: -webkit-box; /* Safari */
+    display: -webkit-flex; /* Chrome, WebKit */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.flex_around {
+    display: -moz-box; /* Firefox */
+    display: -ms-flexbox; /* IE10 */
+    display: -webkit-box; /* Safari */
+    display: -webkit-flex; /* Chrome, WebKit */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/*单双行*/
+.single_line{
+    overflow: hidden;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.double_line{
+    overflow:hidden;
+    text-overflow:ellipsis;
+    display:-webkit-box;
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp:2;
+}
+
+/*富文本样式*/
+/*word-wrap富文本数字字母自动换行*/
+.html_block{
+    margin: initial;
+    padding: initial;
+    text-align: initial;
+    text-indent: initial;
+    font-size: initial;
+    color: initial;
+    word-wrap: break-word;
+    overflow:hidden;
+}
+.html_block img{
+    width:100% !important;
+}
+
+/*点击特效*/
+.ui_inline_click:active{
+    display: inline-block;
+    transform:scale(0.92);
+    -webkit-transform:scale(0.92);
+    -webkit-filter: brightness(0.85);
+    filter: brightness(0.95);
+}
+.ui_block_click:active{
+    display: block;
+    transform:scale(0.92);
+    -webkit-transform:scale(0.92);
+    -webkit-filter: brightness(0.85);
+    filter: brightness(0.95);
+}
+
+/*按鈕*/
+.btn_init{
+    border: 0;
+    background: transparent;
+    outline: none;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+/*输入框*/
+.ipt_init{
+    background: transparent;
+    text-align: left;
+    text-indent: 15px;
+    border: 0;
+    outline: none;
+}
+
+/*常用padding*/
+.pd_horizontal_20{
+    padding: 0 20px;
+}
+.pd_20{
+    padding: 20px;
+}
+
+
+

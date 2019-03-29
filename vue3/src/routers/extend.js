@@ -1,0 +1,13 @@
+const extendRouter = [
+    {
+        path: '/extend/extend',
+        name: 'extend',
+        component:  resolve => require(['@/pages/extend/extend'], resolve),
+        meta: {
+            isNeedLogin: false,
+            title: '拓展组件'
+        }
+    },
+];
+
+export default extendRouter;

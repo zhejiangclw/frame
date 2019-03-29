@@ -1,5 +1,5 @@
 <template>
-    <div class="tip-warp" v-show="visible">
+    <div class="tip-warp" v-show="visible" @click="visible = false">
 
     </div>
 </template>
@@ -8,28 +8,9 @@
     export default {
         name: "other-browser-open-tip",
         props: ['visible'],
-        mounted() {
-
-
-
-        },
-        methods: {
-
-        }
     }
 </script>
-<style>
-    .fixed{
-        /*position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        overflow: hidden;*/
-        overflow: hidden;
-        height: 100%;
-    }
-</style>
+
 <style scoped lang="scss">
     /*修正距离和修正层级*/
     $amend-width: 20px;

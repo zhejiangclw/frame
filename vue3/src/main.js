@@ -6,9 +6,7 @@ import 'babel-polyfill';
 
 Vue.config.productionTip = false;
 
-import OboTip from '@/components/otherBrowserOpenTip'
 
-Vue.use(OboTip)
 
 new Vue({
   router,
