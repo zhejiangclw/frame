@@ -4,13 +4,13 @@ import Vuex from 'vuex'
 Vue.use(Vuex)
 
 export default new Vuex.Store({
-  state: {
-
-  },
-  mutations: {
-
-  },
-  actions: {
-
-  }
+    state: {
+        navShow: true
+    },
+    mutations: {
+        changeNavShow(state, flag) {
+            state.navShow = flag;
+        }
+    },
+    actions: {}
 })

@@ -2,6 +2,7 @@
     <div class="home">
         <img alt="Vue logo" src="../assets/logo.png">
         <button @click="open">测试</button>
+        <router-link to="login">登录页</router-link>
         <HelloWorld msg="Welcome to Your Vue.js App"/>
     </div>
 </template>
@@ -12,14 +13,16 @@
 
 
 
+
+
     export default {
         name: 'home',
         components: {
             HelloWorld,
         },
         mounted(){
-
             // OboTip.open()
+
         },
         methods: {
             open() {

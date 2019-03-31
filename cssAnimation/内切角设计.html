@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+    <style>
+        .box{
+            width: 150px;
+            height: 100px;
+            margin: 10px;
+            /* outline: solid 3px red; */
+            position: relative;
+            background-color: transparent;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        .box::before{
+            content: '';
+            display: block;
+            position: absolute;
+            top: -25px;
+            left: -25px;
+            width: 50px;
+            height: 50px;
+            /* background-color: purple; */
+            z-index: 2;
+            box-shadow: 0 0 0 200px;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+        }
+        .box1::before{
+            bottom: -25px;
+            right: -25px;
+            top: initial;
+            left: inherit;
+        }
+        .box2::before{
+            bottom: -25px;
+            right: initial;
+            top: initial;
+            left: -25px;
+        }
+        .box3::before{
+            bottom: initial;
+            right: -25px;
+            top: -25px;
+            left: inherit
+        }
+        .box4::before{
+            bottom: 0;
+            right: 0;
+        }
+        .box.box5{
+            background-color: skyblue;
+            overflow: initial;
+        }
+        .box5::before{
+            bottom: 0;
+            right: 0;
+            background-color: red;
+            box-shadow: 0 0 0 200px rgba(23,123,123,.5);
+        }
+
+        .step1{
+            width: 150px;
+            height: 100px;
+            margin: 10px;
+             outline: solid 3px yellow;
+            position: relative;
+            background-color: red;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        .step1::before{
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 50px;
+            height: 50px;
+             background-color: blue;
+            z-index: 2;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+        }
+        .step1.step2{
+            overflow: initial;
+        }
+        .step1.step2::before{
+            top: -25px;
+            left: -25px;
+            -webkit-box-shadow: 0 0 0 160px rgba(231,112,111,.5);
+            -moz-box-shadow: 0 0 0 160px rgba(231,112,111,.5);
+            box-shadow: 0 0 0 160px rgba(231,112,111,.5);
+        }
+        
+        .step1.step2.step3{
+            outline: none;
+            overflow: hidden;
+            background-color: transparent;
+        }
+        .step1.step2.step3::before{
+            background-color: transparent;
+        }
+    </style>
+</head>
+<body style="background-color:yellowgreen;">
+<a href="https://www.w3cplus.com/css/scooped-corners.html" style="font-size: 30px;">demo</a>
+    <!--结果展示-->
+    <div>
+        <h2>结果展示</h2>
+        <div style="margin: 0 100px; display: flex;">
+            <div class="box box1"></div>
+            <div class="box box2"></div>
+        </div>
+        <div style="margin:0 100px; display: flex;">
+            <div class="box box3"></div>
+            <div class="box box4"></div>
+        </div>
+    </div>
+
+
+    <!--第一步-->
+    <div>
+        <h2>第一步:制作一个具有背景的长条,然后border-radius磨皮棱角,并利用before等制作一个裁剪区</h2>
+        <div style="margin:100px 100px; display: flex;">
+            <div class="step1"></div>
+        </div>
+    </div>
+
+    <!--第二步-->
+    <div>
+        <h2>第二步:设置before的阴影,利用阴影区域覆盖原长条,取消长条的overflow,定位小球位置</h2>
+        <div style="margin:100px 100px; display: flex;">
+            <div class="step1 step2"></div>
+        </div>
+    </div>
+
+    <!--第三步-->
+    <div>
+        <h2>第三步:恢复长条的overflow,并设置长条以及小球background为透明,用box-shadow充当背景板</h2>
+        <div style="margin:100px 100px; display: flex;">
+            <div class="step1 step2 step3"></div>
+        </div>
+    </div>
+
+</body>
+</html>
