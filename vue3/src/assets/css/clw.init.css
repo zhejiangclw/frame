@@ -1,0 +1,126 @@
+
+li {
+    list-style: none;
+    color: #222;
+}
+a {
+    text-decoration: none;
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;
+}
+.nav-item {
+    float: left;
+    text-align: center;
+    line-height: 42px;
+    height: 42px;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0);
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.nav-item:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+.t {
+    color: inherit;
+    height: 100%;
+    display: block;
+    padding: 0 11px;
+}
+.num {
+    height: 12px;
+    line-height: 12px;
+    color: #FFF;
+    background-color: #F25D8E;
+    border-radius: 10px;
+    position: absolute;
+    padding: 1px 2px;
+    font-size: 12px;
+    top: 1px;
+    right: -4px;
+    min-width: 16px;
+    z-index: 30;
+    text-align: center;
+}
+.red_point {
+    height: 8px;
+    width: 8px;
+    border-radius: 100%;
+    position: absolute;
+    right: 6px;
+    top: 7px;
+    background-color: #F25D8E;
+}
+.notify-float {
+    /*border: 1px solid #F25D8E;*/
+    -webkit-box-shadow: 0 1px 4px 0 #f25d8e;
+    box-shadow: 0 1px 4px 0 #f25d8e;
+    background: #FFF;
+    position: absolute;
+    border-radius: 4px;
+    line-height: 36px;
+    text-align: left;
+    padding: 0px 15px;
+    top: 52px;
+    left: -8px;
+    white-space: nowrap;
+}
+.notify-float .tri {
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: -6px;
+    background-color: white;
+    left: 22px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.notify-float .float_msg > div {
+    display: inline-block;
+    margin-right: 30px;
+}
+.notify-float .float_msg > div span {
+    cursor: pointer;
+    color: #00A1D6;
+}
+.notify-float .float_msg > div span:hover {
+    color: #F25D8E;
+}
+.notify-float .float_msg > i {
+    float: none;
+    cursor: pointer;
+    background-position: -472px -536px;
+    width: 16px;
+    height: 16px;
+}
+.b-icon {
+    display: inline-block;
+    vertical-align: middle;
+    width: 12px;
+    height: 12px;
+    background: url(//static.hdslb.com/images/base/icons.png) no-repeat;
+}
+.slide-fade-enter-active,
+.slide-fade-leave-active {
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.slide-fade-enter,
+.slide-fade-leave-to {
+    -webkit-transform: translateY(5px);
+    transform: translateY(5px);
+    opacity: 0;
+}
+.i-frame {
+    position: absolute;
+    width: 110px;
+    height: 210px;
+    top: 100% !important;
+    left: 0 !important;
+    left: calc(50% -  55px) !important;
+    background: #FFF;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 4px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 4px;
+    border-radius: 0 0 4px 4px;
+    overflow: hidden;
+}
